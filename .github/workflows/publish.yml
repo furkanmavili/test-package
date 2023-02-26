@@ -18,13 +18,14 @@ jobs:
         with:
           node-version: 16.x
           cache: "pnpm"
+          registery-url: "https://registry.npmjs.org"
 
       - run: pnpm install --frozen-lockfile
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm run release
+          publish: pnpm run release --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
