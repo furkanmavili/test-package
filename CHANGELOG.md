@@ -1,5 +1,11 @@
 # test-package
 
+## 0.0.4
+
+### Patch Changes
+
+- f443e80: Bump version
+
 ## 0.0.3
 
 ### Patch Changes
